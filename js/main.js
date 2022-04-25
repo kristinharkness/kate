@@ -1,5 +1,5 @@
 function start_vimeo(vimeo_ID, color, overlay) {
-    $("#kh-vimeo-iframe").attr("src", "http://player.vimeo.com/video/" + vimeo_ID + "?color=" + color);
+    $("#kh-vimeo-iframe").attr("src", "https://player.vimeo.com/video/" + vimeo_ID + "?color=" + color);
     $("#kh-vimeo-player").css("opacity", 1);
     $("#kh-vimeo-player").css("zIndex", 200);
     if (overlay) {
