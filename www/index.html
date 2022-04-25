@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <title>Kate Harkness</title>
+
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link rel="stylesheet" type="text/css" href="css/work.css" />
+  <link rel="stylesheet" type="text/css" href="css/resume.css" />
+  <link rel="stylesheet" type="text/css" href="css/about.css" />
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.js"><\/script>')</script>
+  <script type="text/javascript" src="js/main.js"></script> 
+
+</head>
+
+<body onload="init();">
+
+  <div id="kh-container">
+
+    <!-- radio buttons and labels for nav -->
+    <input type="radio" name="radio-set" value="0" id="kh-radio-reel" onclick="javascript:start_reel();"/>
+    <input type="radio" name="radio-set" value="1" id="kh-radio-work" onclick="javascript:stop_vimeo();"/>
+    <input type="radio" name="radio-set" value="2" id="kh-radio-resume" onclick="javascript:stop_vimeo();"/>
+    <input type="radio" name="radio-set" value="3" id="kh-radio-about" onclick="javascript:stop_vimeo();"/>
+
+    <div id="kh-nav-buttons">
+      <label for="kh-radio-reel" class="kh-nav-button" id="kh-radio-reel-label"></label>
+      <label for="kh-radio-work" class="kh-nav-button" id="kh-radio-work-label"></label>
+      <label for="kh-radio-resume" class="kh-nav-button" id="kh-radio-resume-label"></label>
+      <label for="kh-radio-about" class="kh-nav-button" id="kh-radio-about-label"></label>
+    </div>
+
+    <!-- div to force scrolling -->
+    <div id="kh-scroll"></div>
+
+    <!-- div to dim background while playing movie -->
+    <div id="kh-vimeo-overlay"></div>
+
+    <!-- the animation stuff floats on top -->
+    <div id="kh-anim">
+      <div class="kh-anim-layer" id="kh-anim-layer-1">
+        <div class="kh-anim-element" id="kh-reel-clouds"></div>
+        <div class="kh-anim-element" id="kh-resume-cloud1"></div>
+        <div class="kh-anim-element" id="kh-resume-cloud2"></div>
+        <div class="kh-anim-element" id="kh-stars"></div>
+      </div>
+      <div class="kh-anim-layer" id="kh-anim-layer-2">
+        <div class="kh-anim-element" id="kh-sun"></div>
+        <div class="kh-anim-element" id="kh-moon"></div>
+      </div>
+      <div class="kh-anim-layer" id="kh-anim-layer-3">
+        <div class="kh-anim-element" id="kh-face"></div>
+      </div>
+      <div class="kh-anim-layer" id="kh-anim-layer-4"></div>
+    </div>
+
+    <!-- it's all about Kate Harkness -->
+    <div id="kh-name"></div>
+
+    <!-- the vimeo iframe (content for reel page) -->
+    <div id="kh-vimeo-player">  
+      <iframe src="http://player.vimeo.com/video/75998400?color=DE743B" id="kh-vimeo-iframe"
+              webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+      </iframe>
+      <div id="kh-vimeo-close" onClick="stop_vimeo()"></div>
+    </div>
+
+
+    <!-- content for the work page -->
+    <div class="kh-content" id="kh-work">
+      <div id="kh-vthumbs">
+        <div class="kh-vthumb" onClick="start_vimeo('76481329', 'FFC4D6', true)">
+          <img src="thumbnails/thumb_GG.jpg" alt="The Golden Grinder Cup"/>
+          <div><h3>The Golden Grinder Cup</h3><p>Two unlikely competitors face off in this 
+            mockumentary about a mini-golf tournament set in New London, CT.
+            Winner of “Best Film” and “Audience Choice” at Whaling City Film Project.</p>
+          </div>
+        </div>
+        <div class="kh-vthumb" onClick="start_vimeo('69252261', 'FFC4D6', true)">
+          <img src="thumbnails/thumb_AS.jpg" alt="Alphabet Soup"/>
+          <div><h3>Alphabet Soup</h3><p>A micro series about the life, love, and heartaches of 
+            a group of college friends. Each episode takes place on a different holiday over the course
+            of their senior year, but can their friendships make it all the way to graduation?</p>
+          </div>
+        </div>
+        <div class="kh-vthumb" onClick="start_vimeo('57901096', 'FFC4D6', true)">
+          <img src="thumbnails/thumb_KBKM.jpg" alt="Planet KBKM"/>
+          <div><h3>Planet KBKM</h3><p>A man explores an alien planet and encounters a strange woman 
+            and a little more than he bargained for. This piece was made with a combination of green
+            screen compositing and models.</p>
+          </div>
+        </div>
+        <div class="kh-vthumb" onClick="start_vimeo('42886443', 'FFC4D6', true)">
+	  <img src="thumbnails/thumb_M.jpg" alt="Mermance"/>
+          <div><h3>Mermance</h3><p>The story of a lonely boy who finds a mermaid in a city canal and
+            journeys to return her to the sea. Too bad he can’t understand what she has to say about that …</p>
+          </div>
+        </div>
+        <div class="kh-vthumb" onClick="start_vimeo('39209639', 'FFC4D6', true)">
+	  <img src="thumbnails/thumb_HtTaTS.jpg" alt="How to Take a Tequila Shot"/>
+          <div><h3>How to Take a Tequila Shot</h3><p>A how-to video.</p></div>
+        </div>
+        <div class="kh-vthumb" onClick="start_vimeo('39209638', 'FFC4D6', true)">
+	  <img src="thumbnails/thumb_MV.jpg" alt="Music Video"/>
+          <div><h3>Music Video</h3><p>A music video for “Night Call” by Kavinsky using altered and 
+            datamoshed footage from the film <em>Drive</em>.</p>
+          </div>
+        </div>
+        <div class="kh-vthumb" onClick="start_vimeo('39209640', 'FFC4D6', true)">
+	  <img src="thumbnails/thumb_DR.jpg" alt="Drive Rotoscope"/>
+          <div><h3>Drive Rotoscope</h3><p>A rotoscope animation of a scene from the film 
+            <em>Drive</em>.</p>
+          </div>
+        </div>
+        <div class="kh-vthumb" onClick="start_vimeo('39209636', 'FFC4D6', true)">
+	  <img src="thumbnails/thumb_M2M.jpg" alt="My Two Moms"/>
+          <div><h3>My Two Moms</h3><p>A documentary about my family and growing up with lesbian
+            moms.</p>
+          </div>
+        </div>
+        <div class="kh-vthumb" onClick="start_vimeo('39201863', 'FFC4D6', true)">
+	  <img src="thumbnails/thumb_PoPA.jpg" alt="Portrait of a Portrait Artist"/>
+          <div><h3>Portrait of a Portrait Artist</h3><p>A documentary about a portrait photographer
+            friend of mine as she works and contemplates life beyond New York City.</p>
+          </div>
+        </div>
+        <div class="kh-vthumb" onClick="start_vimeo('39204673', 'FFC4D6', true)">
+	  <img src="thumbnails/thumb_CbS.jpg" alt="Can't Be Satisfied"/>
+          <div><h3>Can't Be Satisfied</h3><p>A paint on glass animation set to the song
+            “Jesus Make Up My Dying Bed” by Blind Willie Johnson.</p>
+          </div>
+        </div>
+        <div class="kh-vthumb" onClick="start_vimeo('38890531', 'FFC4D6', true)">
+	  <img src="thumbnails/thumb_MM.jpg" alt="The Trapeze Artist"/>
+          <div><h3>The Trapeze Artist</h3><p>A watercolor cutout animation set to the song 
+            “My Mother was a Chinese Trapeze Artist” by the Decemberists.</p>
+          </div>
+        </div>
+        <div class="kh-vthumb" onClick="start_vimeo('39201866', 'FFC4D6', true)">
+	  <img src="thumbnails/thumb_ICA.jpg" alt="ICA"/>
+          <div><h3>ICA</h3><p>Two girls' stories are woven together in this experimental fantasy.
+            Hand edited on 16mm film.</p>
+          </div>
+        </div>
+        <div class="kh-vthumb" onClick="start_vimeo('38890530', 'FFC4D6', true)">
+	  <img src="thumbnails/thumb_OLT.jpg" alt="One Last Time"/>
+          <div><h3>One Last Time</h3><p>At the prom old flames are reignited. Gouache cutout 
+            animation set to the song “No One’s Gonna Love you” by Band of Horses.</p>
+          </div>
+        </div>
+        <div class="kh-vthumb" onClick="start_vimeo('39201864', 'FFC4D6', true)">
+	  <img src="thumbnails/thumb_HYC.jpg" alt="Hell Yes Cocoa"/>
+          <div><h3>Hell, Yes! Cocoa</h3><p>My first film. My mother made me put it here.</p></div>
+        </div>
+        <div class="kh-vthumb" onClick="start_vimeo('38890532', 'FFC4D6', true)">
+	  <img src="thumbnails/thumb_RB.jpg" alt="Rule, Britannia!"/>
+          <div><h3>Rule, Britannia!</h3><p>My first animation. Each frame is hand drawn; 
+            cf. first film above.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- content for the resume page -->
+    <div class="kh-content" id="kh-resume">
+      <img id="kh-resume-all" src="images/resume_all.png" alt="resume"/>
+      <div id="kh-resume-primary">
+        <img id="kh-resume-education" src="images/resume_education.png" alt="Education"/>
+        <img id="kh-resume-skills" src="images/resume_skills_all.png" alt="Skills"/>
+        <img id="kh-resume-list-skills" src="images/resume_list_skills.png" alt="Skills"/>
+        <img id="kh-resume-bars-skills" src="images/resume_bars_skills.png" alt="Skills"/>
+      </div>
+      <div id="kh-resume-rest">
+        <img id="kh-resume-objective" src="images/resume_objective.png" alt="Skills"/>
+        <img id="kh-resume-experience" src="images/resume_experience.png" alt="Skills"/>
+      </div>
+      <span id="kh-resume-face">
+        <a id="kh-resume-download" href="materials/kate_harkness_resume.pdf" download="KateHarknessResume.pdf" target="_blank"></a>
+      </span>
+    </div>
+
+    <!-- content for the about page -->
+    <div class="kh-content" id="kh-about"></div>
+  
+    <!-- contact links and copyright on every page -->
+    <div id="kh-masthead">
+      <div id="kh-masthead-icons">
+        <a id="kh-vimeo-icon" href="http://vimeo.com/kateharkness" target="_blank"></a>
+        <a id="kh-linkedin-icon" href="http://linkedin.com/in/kateharkness" target="_blank"></a>
+        <a id="kh-mail-icon" href="mailto:kate@kateharkness.com"></a>
+      </div>
+      <div id="kh-copyright"></div>
+    </div>
+    
+  </div> <!-- kh_container -->
+
+  <!-- Test - remove! -->
+  <div id="scroll-position"><p>scroll position goes here</p></div>
+
+</body>
+</html>

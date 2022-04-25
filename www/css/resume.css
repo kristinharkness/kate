@@ -1,0 +1,198 @@
+
+/* resume page content */
+
+#kh-resume {
+    width: 66%;
+    max-width: 1255px;
+}
+
+#kh-resume div,
+#kh-resume div > img {
+    position: relative;
+    float: left;
+}
+
+#kh-resume-primary {
+    width: 66.6%;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+#kh-resume-rest {
+    width: 33.4%;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+#kh-resume-education {
+    width: 50%;
+    max-width: 416px;
+}
+
+/* 461 x 492 */
+#kh-resume-face {
+    display: block;
+    position: absolute;
+    top: -10%;
+    left: 30%;
+    width: 37%;
+    height: 0;
+    padding-bottom: 39.488%;
+    background-image: url("../images/resume_face.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/* 65 x 90 */
+#kh-resume-download {
+    position: absolute;
+    display: block;
+    top: 3%;
+    right: 3%;
+    width: 18%;
+    height: 0;
+    padding-bottom: 24.923%;
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-image: url("../images/pdf_button.png");
+    background-position: 0 0;
+    z-index: 800;
+}
+
+#kh-resume-download:hover {
+    cursor: pointer;
+    background-position: 100% 0;
+}
+
+#kh-resume-all {
+    display: none;
+}
+
+#kh-resume-skills {
+    width: 100%;
+    max-width: 806px;
+}
+
+#kh-resume-list-skills,
+#kh-resume-bars-skills {
+    display: none;
+    width: 100%;
+    max-width: 413px;
+}
+
+#kh-resume-objective {
+    width: 100%;
+    max-width: 445px;
+}
+
+#kh-resume-experience {
+    width: 100%;
+    max-width: 449px;
+}
+
+@media screen and (min-aspect-ratio: 900/545) {
+
+    #kh-resume {
+        width: 60%;
+    }
+}
+
+@media screen and (min-aspect-ratio: 1060/589) {
+
+    #kh-resume {
+        width: 55%;
+    }
+}
+
+@media screen and (min-aspect-ratio: 1160/589) {
+
+    #kh-resume {
+        width: 50%;
+    }
+}
+
+@media screen and (max-aspect-ratio: 4/5) {
+
+    #kh-resume {
+        top: 8%;
+        height: 90%;
+    }
+
+    #kh-resume-education {
+        width: 100%;
+    }
+
+    #kh-resume-face {
+        top: -8%;
+        left: auto;
+        right: 10%;
+    }
+
+    #kh-resume-download {
+        right: -5%;
+        background-image: url("../images/pdf_button_pink.png");
+    }
+
+    #kh-resume-skills {
+        display: none;
+    }
+
+    #kh-resume-list-skills,
+    #kh-resume-bars-skills {
+        display: block;
+    }
+
+    #kh-resume-primary {
+        width: 50%;
+    }
+
+    #kh-resume-rest {
+        top: 10%;
+        width: 50%;
+    }    
+}
+
+
+/* When the resume page is selected ... */
+
+#kh-radio-resume:checked ~ #kh-nav-buttons #kh-radio-resume-label {
+    background-position: 0 0;
+    cursor: default;
+}
+
+#kh-radio-resume:checked ~ #kh-scroll {
+    background: #FFC4D6;
+}
+
+#kh-radio-resume:checked ~ #kh-resume {
+    z-index: 100;
+    opacity: 1;
+}
+
+#kh-radio-resume:checked ~ #kh-anim #kh-sun {
+    left: 85%;
+    bottom: 29%;
+}
+
+#kh-radio-resume:checked ~ #kh-anim #kh-resume-cloud1 {
+    left: 0;
+    opacity: 1;
+}
+
+#kh-radio-resume:checked ~ #kh-anim #kh-resume-cloud2 {
+    right: 0;
+    opacity: 1;
+}
+
+#kh-radio-resume:checked ~ #kh-anim #kh-reel-clouds {
+    opacity: 0;
+    bottom: 100%;
+}
+
+#kh-radio-resume:checked ~ #kh-name,
+#kh-radio-resume:checked ~ #kh-anim > #kh-anim-layer-4,
+#kh-radio-resume:checked ~ #kh-masthead a,
+#kh-radio-resume:checked ~ #kh-masthead #kh-copyright {
+    background-position: 66.66666666% 0;
+}
+

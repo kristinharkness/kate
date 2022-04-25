@@ -1,0 +1,392 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Myriad Pro", Helvetica, sans-serif;
+}
+
+#kh-scroll {
+    position: absolute;
+    width: 100%;
+    height: 100%;  /* 400 when we play with scrolling again */
+    top: 0;
+    left: 0;
+    background: #FEF3CB;
+
+    transition: background 2s ease-in-out;
+    -webkit-transition: background 2s ease-in-out; /* Safari */
+}
+
+#scroll-position {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+}
+
+/* nav buttons */
+
+#kh-container > input {
+    display: none;
+}
+
+.kh-nav-button {
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-bottom: 37.5%;
+    margin-top: 5%;
+
+    background-position: 33.33333333% 0;
+    background-size: 400%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.kh-nav-button:hover {
+    background-position: 0 0;
+}
+
+#kh-nav-buttons {
+    position: fixed;
+    top: 20%;
+    right: 2%;
+    width: 15%;
+
+    background-image: url("../buttons/nav_pole.png");
+    z-index: 90;
+    background-size: 100% 80%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+@media only screen
+and (max-width : 1000px) {
+
+    .kh-nav-button {
+        top: 25%;
+        margin-top: 10%;
+    }
+}
+
+@media only screen
+and (max-width : 800px) {
+
+    .kh-nav-button {
+        top: 30%;
+        margin-top: 15%;
+    }
+}
+
+@media only screen
+and (max-width : 600px) {
+
+    .kh-nav-button {
+        top: 30%;
+        margin-top: 20%;
+    }
+}
+
+@media only screen
+and (max-width : 479px) {
+
+    #kh-nav-buttons {
+        background-size: 100% 80%;
+        background-position: center 80%;
+    }
+
+    .kh-nav-button {
+        top: 40%;
+        margin-top: 60%;
+    }
+}
+
+
+#kh-radio-reel-label {
+    background-image: url("../buttons/reel_nav_buttons.png");
+}
+
+#kh-radio-work-label {
+    background-image: url("../buttons/work_nav_buttons.png");
+}
+
+#kh-radio-resume-label {
+    background-image: url("../buttons/resume_nav_buttons.png");
+}
+
+#kh-radio-about-label {
+    background-image: url("../buttons/about_nav_buttons.png");
+}
+
+
+
+/* animation divs */
+
+#kh-anim {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+.kh-anim-layer {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.kh-anim-element {
+    position: absolute;
+    height: 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    transition-property: opacity, top, bottom, left, right;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-property: opacity, top, bottom, left, right;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+/* the 1st layer has the clouds / stars */
+#kh-anim-layer-1 {
+    top: 0;
+    height: 100%;
+    z-index: 10;
+}
+
+#kh-reel-clouds {
+    opacity: 1;
+    left: 0;
+    bottom: 100%;
+    width: 100%;
+    padding-bottom: 62.5%;
+    background-image: url("../images/reel_clouds.png");
+}
+
+#kh-resume-cloud1 {
+    opacity: 0;
+    top: 43%;
+    left: -24%;
+    width: 24%;
+    padding-bottom: 12%;
+    background-image: url("../images/resume_cloud1.png");
+}
+
+#kh-resume-cloud2 {
+    opacity: 0;
+    top: 0%;
+    right: -30%;
+    width: 30%;
+    padding-bottom: 15%;
+    background-image: url("../images/resume_cloud2.png");
+}
+
+#kh-stars {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 62.5%;
+    background-image: url("../images/stars.png");
+}
+
+/* the second layer has the sun / moon */
+#kh-anim-layer-2 {
+    top: 0;
+    height: 100%;
+    z-index: 20;
+}
+
+#kh-sun {
+    bottom: 0;
+    left: 0;
+    width: 8%;
+    padding-bottom: 8%;
+    background-image: url("../images/sun.png");
+}
+
+#kh-moon {
+    top: -30%;
+    left: 80%;
+    width: 8%;
+    padding-bottom: 8%;
+    background-image: url("../images/moon.png");
+}
+
+/* the third layer has kate's face */
+#kh-anim-layer-3 {
+    bottom: 0;
+    height: 90%;
+    z-index: 30;
+}
+
+#kh-face {
+    opacity: 0;
+    bottom: -50%;
+    left: 0;
+    width: 30%;
+    padding-bottom: 40%;
+    background-image: url("../images/face.png");
+}
+
+/* the 4th layer has the hills */
+#kh-anim-layer-4 {
+    bottom: 0;
+    height: 0;
+    padding-bottom: 27.3%;
+    background-size: 400%;
+    background-repeat: no-repeat;
+    background-image: url("../images/hills.png");
+    z-index: 40;
+}
+
+
+
+/* Kate Harkness */
+
+#kh-name {
+    position: fixed;
+    top: 2%;
+    left: 3%;
+    width: 50%;
+    height: 0;
+    padding-bottom: 7.08%;
+    background-size: 400%;
+    background-repeat: no-repeat;
+    background-image: url("../images/kateharkness.png");
+    z-index: 50;
+}
+
+
+/* Vimeo player */
+
+#kh-vimeo-player {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 60%;
+    margin: auto auto;
+
+    z-index: -1;
+    opacity: 0;
+
+    border:3px solid #DE743B;
+    padding:3px;
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    transition: opacity 2s ease-in-out;
+    -webkit-transition: opacity 2s ease-in-out; /* Safari */
+}
+
+iframe {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border: 0;
+}
+
+#kh-vimeo-close {
+    display: none;
+}
+
+
+
+/* content for work, resume, about */
+
+.kh-content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    height: 75%;
+
+    margin: auto auto;
+    opacity: 0;
+    z-index: -1;
+
+    transition: opacity 2s ease-in-out .5s;
+    -webkit-transition: opacity 2s ease-in-out .5s; /* Safari */
+}
+
+/* footer: communication links and copyright */
+
+#kh-masthead {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+#kh-masthead-icons {
+    width: 10%;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+#kh-masthead a {
+    position:relative;
+    cursor: pointer;
+    display: inline-block;
+    float:left;
+    width: 33.333333%;
+    height: 0;
+    padding-bottom: 26.66666666%;
+    background-size: 400%;
+    background-repeat: no-repeat;
+}
+
+#kh-vimeo-icon {
+    background-image: url("../buttons/vimeo_buttons.png");
+}
+
+#kh-linkedin-icon {
+    background-image: url("../buttons/linkedin_buttons.png");
+}
+
+#kh-mail-icon {
+    background-image: url("../buttons/mail_buttons.png");
+}
+
+#kh-copyright {
+    width: 20%;
+    height: 0;
+    margin: 0 auto;
+    padding-bottom: 2%;
+    background-size: 400%;
+    background-repeat: no-repeat;
+    background-image: url("../images/copyrights.png");
+}
+
+
+/* When the reel page is selected ... */
+
+#kh-radio-reel:checked ~ #kh-nav-buttons #kh-radio-reel-label {
+    background-position: 0 0;
+    cursor: default;
+}
+
+#kh-radio-reel:checked ~ #kh-vimeo-player {
+    opacity: 1;
+    z-index: 200;
+}
+
+#kh-radio-reel:checked ~ #kh-anim #kh-reel-clouds {
+    bottom: 0%;
+}
+
+#kh-radio-reel:checked ~ #kh-anim #kh-sun {
+    left: 10%;
+    bottom: 30%;
+}
+

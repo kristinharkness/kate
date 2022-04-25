@@ -1,0 +1,65 @@
+
+/* 724 x 454 */
+#kh-about {
+    max-width: 1446px;
+    background-image: url("../images/about_all.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+
+
+/* When the about page is selected ... */
+
+#kh-radio-about:checked ~ #kh-nav-buttons #kh-radio-about-label {
+    background-position: 0 0;
+    cursor: default;
+}
+
+#kh-radio-about:checked ~ #kh-nav-buttons .kh-nav-button {
+    background-position: 66.66666666% 0;
+}
+
+#kh-radio-about:checked ~ #kh-nav-buttons .kh-nav-button:hover {
+    background-position: 0 0;
+}
+
+#kh-radio-about:checked ~ #kh-scroll {
+    background: #003366;
+}
+
+#kh-radio-about:checked ~ #kh-about {
+    z-index: 100;
+    opacity: 1;
+}
+
+#kh-radio-about:checked ~ #kh-anim #kh-sun {
+    left: 80%;
+    bottom: 0%;
+}
+
+#kh-radio-about:checked ~ #kh-anim #kh-moon {
+    top: 2%;
+}
+
+#kh-radio-about:checked ~ #kh-anim #kh-stars {
+    opacity: 1;
+}
+
+#kh-radio-about:checked ~ #kh-anim #kh-face {
+    opacity: 1;
+    bottom: 20%;
+}
+
+#kh-radio-about:checked ~ #kh-anim #kh-reel-clouds {
+    opacity: 0;
+    bottom: 100%;
+}
+
+#kh-radio-about:checked ~ #kh-name,
+#kh-radio-about:checked ~ #kh-anim > #kh-anim-layer-4,
+#kh-radio-about:checked ~ #kh-masthead a,
+#kh-radio-about:checked ~ #kh-masthead #kh-copyright {
+    background-position: 100% 0;
+}
